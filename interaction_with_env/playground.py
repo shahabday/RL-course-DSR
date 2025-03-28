@@ -14,3 +14,5 @@ env = gym.make("CartPole-v1", render_mode="rgb_array")
 # 2 - Interact with environment
 # 2.1 - Push the cart to the left once
 # 2.2 - Repeat the action above until the pole falls, i.e. the episode is terminated
+
+print("goodbye")
