@@ -3,21 +3,22 @@
 
 # 0 - Create an env
 import gymnasium as gym
-import random
+import numpy as np
 env = gym.make("CartPole-v1", render_mode="rgb_array")
 
 # 1 - Reset the env.
 
 # 2 - Let a random agent interact with the env.
+number_of_actions = env.action_space.n
 #
-random.seed(42)
+
 
 for episode in range (1000):
   env.reset()
   total_reward = 0
   for actions in range(1000):
 
-    action = random.choice([0,1])
+    action = np.random.randint(number_of_actions)
     observation, reward, terminated, truncated,  info = env.step(action)
     total_reward += reward
     if terminated:
