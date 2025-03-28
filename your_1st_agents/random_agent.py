@@ -4,7 +4,8 @@
 # 0 - Create an env
 import gymnasium as gym
 import numpy as np
-env = gym.make("CartPole-v1", render_mode="rgb_array")
+#env = gym.make("CartPole-v1", render_mode="rgb_array")
+env = gym.make("MountainCar-v0" , render_mode = "rgb_array")
 
 # 1 - Reset the env.
 
@@ -21,7 +22,7 @@ for episode in range (1000):
     action = np.random.randint(number_of_actions)
     observation, reward, terminated, truncated,  info = env.step(action)
     total_reward += reward
-    if terminated:
+    if truncated or terminated:
         #print(f'episode : {episode} reward : {reward} done : {done} info : {info}')
         print(f'episod : {episode}')
         print(f' total reward {total_reward}')
