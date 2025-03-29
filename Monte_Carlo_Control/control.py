@@ -9,7 +9,7 @@ from policy import Policy
 from rl_utils import calculate_epsilon
 
 from uneven_maze import UnevenMaze, sample_terrain_function
-"d"
+
 # 1. Initialization
 env_config = {
     "width": 5,
